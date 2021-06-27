@@ -1,0 +1,57 @@
+{% extends 'OSINT/base.html' %} &nbsp;
+
+
+{% block style %}
+
+.form-label{
+color:MediumSeaGreen;
+}
+
+{% endblock style %}
+
+{% block content %}
+
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+
+
+    <form>
+
+    <div class="form-group">
+        <label class="form-label mt-4 " style="color:MediumSeaGreen;">URL</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ссылка на человека">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <label class="form-label mt-4 " style="color:MediumSeaGreen;">Дополнительно</label>
+    <div class="form-group purple-border">
+      <textarea class="form-control purple-border" id="exampleFormControlTextarea4" rows="3"></textarea>
+    </div>
+
+<div class="mt-4">
+  <div class="form-check form-check-inline ">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+  <label class="form-check-label" for="inlineCheckbox1" style="color:MediumSeaGreen;">Информация при рождении</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+  <label class="form-check-label" for="inlineCheckbox2" style="color:MediumSeaGreen;">Информация о личности</label>
+</div>
+<div class="form-check form-check-inline">
+  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" >
+  <label class="form-check-label" for="inlineCheckbox3" style="color:MediumSeaGreen;">Переменная информация</label>
+</div>
+</div>
+
+
+
+    </form>
+
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock content %}

@@ -1,0 +1,65 @@
+
+<!-- templates/registration/login.html -->
+{% extends 'OSINT/base.html' %} &nbsp;
+
+
+
+{% block style %}
+.center_width{
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-label{
+color:MediumSeaGreen;
+}
+
+{% endblock style %}
+
+
+
+{% block content %}
+
+<div class="container cont">
+
+<form class="center_width" method="post">
+{% csrf_token %}
+<!-- {{form}} -->
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <!-- <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"> -->
+    {{form.email}}
+  </div>
+
+    <div class="mb-3">
+    <label for="exampleInputNickname" class="form-label">Никнейм</label>
+    <!-- <input type="text" class="form-control" id="exampleInputNickname"> -->
+    {{form.nickname}}
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Пароль</label>
+    <!-- <input type="password" class="form-control" id="exampleInputPassword1"> -->
+      {{form.password}}
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputPassword2" class="form-label">Повторите пароль</label>
+    <input type="password2" class="form-control" id="exampleInputPassword1">
+  </div>
+  
+  <span> {{error}}</span>
+
+  
+  <!-- <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div> -->
+  <button type="submit" class="btn btn-primary" style="background-color:#454545;">Зарегистрироваться</button>
+</form>
+
+</div>
+
+{% endblock content %}
